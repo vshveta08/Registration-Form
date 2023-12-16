@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.progressbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 8rem;
+    counter-reset: step;
+}
+.progressbar::before, .progress{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 75%;
+    background-color: black;
+    z-index: -1;
+}
+.progress {
+	background-color: blue;
+	width: 0%;
+	transition: 0.3s;
+  }
+.progress-step{
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: rgb(203, 203, 203);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 2px solid black;
+}
+.progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+}
+.progress-step::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100%);
+    font-size: 1rem;
+}
+.progress-step-active{
+    background-color: white;
+    color: blue;
+}
+
+
+/* party info */
+.partyInfo, .logistics-info, .Additional-services{
+    padding: 4rem 3rem;
+}
+
+img{
+    width: 20px;
+    cursor: pointer;
+}
+
+.heading-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content{
+    padding: 1rem 2rem;
+}
+.content .use-info{
+    display: flex;
+    align-items: center;
+	gap: 1rem;
+}
+.content .input-info{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+    gap: 1.3rem;
+    /* width: 1055px; */
+	align-items: center;
+	
+    /* border: 1px solid grey; */
+	box-sizing: border-box;
+}
+.content .input-info .input-div{
+    display: flex;
+	align-items: center;
+    gap: 4rem;
+}
+.input-group select{
+	width: 300px;
+	padding: 0.65rem;
+	border: 1px solid #ccc;
+	border-radius: 0.25rem;
+}
+.plus-img{
+	width: 10px;
+	position: absolute;
+	margin-left: -20px;
+	margin-top: 10px;
+}
+.dot-img{
+	position: absolute;
+	margin-left: 20rem;
+}
+label {
+	display: block;
+	margin-bottom: 0.5rem;
+  }
+  
+input {
+	display: block;
+	width: 300px;
+	padding: 0.65rem;
+	border: 1px solid #ccc;
+	border-radius: 0.25rem;
+}
+.additon-party-button{
+	background-color: rgb(0, 0, 0);
+	color: white;
+	border: 1.5px solid grey;
+	padding: 8px;
+	text-transform: uppercase ;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	margin-top: 1.2rem;
+
+}
+
+/* switch button */
+.switch {
+	position: relative;
+	display: block;
+	/* vertical-align: top; */
+	width: 65px;
+	height: 30px;
+	padding: 3px;
+	margin: 0 10px 10px 0;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+	border-radius: 18px;
+	/* box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05); */
+	cursor: pointer;
+	box-sizing:content-box;
+}
+.switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	box-sizing:content-box;
+}
+.switch-label {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 10px;
+	text-transform: uppercase;
+	background: #eceeef;
+	border-radius: inherit;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+	box-sizing:content-box;
+}
+.switch-label:before, .switch-label:after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-moz-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+	box-sizing:content-box;
+}
+.switch-label:before {
+	content: attr(data-off);
+	right: 11px;
+	color: #aaaaaa;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+	content: attr(data-on);
+	left: 11px;
+	color: #FFFFFF;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+	background: #2be174;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+	opacity: 1;
+}
+.switch-handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+	background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+	border-radius: 100%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+	border-radius: 6px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.switch-input:checked ~ .switch-handle {
+	left: 39.5px;
+	box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Transition of switch button*/
+.switch-label, .switch-handle {
+	transition: All 0.3s ease;
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+}
+
+/* logistics info */
+.logistics-use-info{
+	flex-direction: column;
+	align-items: start;
+	padding: 1rem 2rem;
+}
+.choose-file{
+	display: flex;
+	gap: 1rem;
+}
+.ask-png1{
+	position: absolute;
+	margin-left: -30px;
+	margin-top: 35px;
+}
+.ask-png2{
+	position: absolute;
+	margin-left: -30px;
+	margin-top: 20px;
+}
+.basic-logistics-input-info{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+    gap: 1.3rem;
+    /* border: 1px solid grey; */
+	box-sizing: border-box;
+}
+.basic-logistics-input-info .input-div{
+    display: flex;
+	align-items: center;
+    gap: 4rem;
+} 
+
+#HamContent{
+	display: none;
+}
+
+/* Button */
+.btn {
+	padding: 0.65rem;
+	display: block;
+	width: 150px;
+	text-decoration: none;
+	background-color: rgb(42, 128, 234);
+	color: white;
+	text-align: center;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	transition: 0.3s;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+	font-size: 1.2rem;
+	border: 1.6px solid rgb(2, 2, 211);
+}
+  
+.active-step{
+	display: block;
+}
+.form-step {
+	display: none;
+	transform-origin: top;
+	animation: animate 0.5s;
+}
+#arrowDown1, #arrowDown2, #arrowDown3, #arrowDown4, #arrowDown5, #arrowDown6{
+	display: none;
+}
+#nextBtn, #submitBtn{
+	float: right;
+}
+#prevBtn{
+	float: left;
+}
+#submitBtn{
+	margin-top: -4.5rem;
+}

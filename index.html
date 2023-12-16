@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="container">
+            <form action="#">
+                <!-- progressbar -->
+                <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+                    <div class="progress-step" data-title="Initial Information"></div>
+                    <div class="progress-step progress-step-active" data-title="Party Information"></div>
+                    <div class="progress-step" data-title="Logistics"></div>
+                    <div class="progress-step" data-title="Additional Service"></div>
+                  </div>
+
+                <!-- party info -->
+                <div class="partyInfo form-step-progress" id="active-step">
+                    <!-- Booking party info -->
+                    <div class="booking-party-info" >
+                        <div class="heading-info">
+                            <img src="./assets/arrow-up.png" id="arrowUp1" alt="" onclick="hideContent1()">
+                            <img src="./assets/down.png" id="arrowDown1" alt="" onclick="showContent1()">
+                            <h3>Booking Party Information</h3>
+                            <p>(Enter as much as possible)</p>
+                        </div>
+                        
+                        <div class="content" id="content1">
+                            <div class="use-info">
+                                <p>Use information on account?</p>
+                                <label class="switch">
+                                    <input class="switch-input" type="checkbox" />
+                                    <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                    <span class="switch-handle"></span> 
+                                </label>
+                            </div>
+
+                            <div class="input-info">
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="Firm Name">Firm Name</label>
+                                        <input type="text" placeholder="Input">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Booking Contact Name</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Phone Number (No Spaces)</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="">Billing Address</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">ZIP/Postal Code</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="">Country/City</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="Role">Role</label>
+                                        <select id="" name="Role">
+                                            <option value="Input">Input</option>
+                                            <option value="Input">Input</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Name of Represented Client</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="">Lead counsel(s) Information</label>
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                    <img class="dot-img" src="menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for="">Country/City</label>
+                                        <input type="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <img onclick="addMore()" class="plus-img" src="./assets/plus.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="text" placeholder="Add additional counsel">
+                                    </div>
+                                    <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="" placeholder="">
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>                   
+                    </div>
+
+                    <!-- Opposing party info -->
+                    <div class="booking-party-info">
+                        <div class="heading-info">
+                            <img src="./assets/arrow-up.png" id="arrowUp2" alt="" onclick="hideContent2()">
+                            <img src="./assets/down.png" id="arrowDown2" alt="" onclick="showContent2()">
+                            <h3>Opposing Party Information</h3>
+                        </div>
+                        
+                        <div class="content" id="content2">
+                            
+                            <div class="input-info">
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="Firm Name">Firm Name</label>
+                                        <input type="text" placeholder="Input">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Booking Contact Name</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Phone Number (No Spaces)</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="">Billing Address</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">ZIP/Postal Code</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="">Country/City</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="Role">Role</label>
+                                        <select id="" name="Role">
+                                            <option value="Input">Input</option>
+                                            <option value="Input">Input</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Name of Represented Client</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="">Lead counsel(s) Information</label>
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                    <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for="">Country/City</label>
+                                        <input type="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <img class="plus-img" src="./assets/plus.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="text" placeholder="Add additional counsel">
+                                    </div>
+                                    <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="" placeholder="">
+                                    </div>
+                                </div>
+                            
+                            </div>
+                                
+                                
+                        </div>
+                    
+                    </div>
+
+                    <!-- Additional parties -->
+                    <button class="additon-party-button" onclick="addPartyInfo()"><img src="./assets/plus-sign.png" alt="">Additional parties</button>
+                    
+                    <div class="content" id="HamContent">
+                            
+                        <div class="input-info">
+                            <div class="input-div">
+                                <div class="input-group">
+                                    <label for="Firm Name">Firm Name</label>
+                                    <input type="text" placeholder="Input">
+                                </div>
+                                <div class="input-group">
+                                    <label for="">Booking Contact Name</label>
+                                    <input type="text" placeholder="Type here">
+                                </div>
+                                <div class="input-group">
+                                    <label for="">Phone Number (No Spaces)</label>
+                                    <input type="text" placeholder="Type here">
+                                </div>
+                            </div>
+                            <div class="input-div">
+                                <div class="input-group">
+                                    <label for="">Billing Address</label>
+                                    <input type="text" placeholder="Type here">
+                                </div>
+                                <div class="input-group">
+                                    <label for="">ZIP/Postal Code</label>
+                                    <input type="text" placeholder="Type here">
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="">Country/City</label>
+                                    <input type="text" placeholder="Type here">
+                                </div>
+                            </div>
+                            <div class="input-div">
+                                <div class="input-group">
+                                    <label for="Role">Role</label>
+                                    <select id="" name="Role">
+                                        <option value="Input">Input</option>
+                                        <option value="Input">Input</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label for="">Name of Represented Client</label>
+                                    <input type="text" placeholder="Type here">
+                                </div>
+                                
+                            </div>
+                            <div class="input-div">
+                                <div class="input-group">
+                                    <label for="">Lead counsel(s) Information</label>
+                                    <input type="text" placeholder="Name">
+                                </div>
+                                <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                <div class="input-group">
+                                    <label for="">Country/City</label>
+                                    <input type="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="input-div">
+                                <img class="plus-img" src="./assets/plus.png" alt="">
+                                <div class="input-group">
+                                    <label for=""></label>
+                                    <input type="text" placeholder="Add additional counsel">
+                                </div>
+                                <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                <div class="input-group">
+                                    <label for=""></label>
+                                    <input type="" placeholder="">
+                                </div>
+                            </div>
+                        
+                        </div>
+                            
+                            
+                    </div>
+
+                    <button onclick="next1()" class="btn btn-next" id="nextBtn">Next</button>
+                
+                </div>
+                
+
+                <!-- logistics info -->
+                <div class="logistics-info form-step form-step-progress" id="form-step1">
+
+                    <!-- basic logistics info -->
+                    <div class="basic-logistics-info">
+                        <div class="heading-info">
+                            <img src="./assets/arrow-up.png" id="arrowUp3" alt="" onclick="hideContent3()">
+                            <img src="./assets/down.png" id="arrowDown3" alt="" onclick="showContent3()">
+                            <h3>Basic Logistics</h3>
+                        </div>
+                        
+                        <div class="content"  id="content3">
+                            <div class="logistics-use-info">
+                                <p>Upload Cover Page (Optional)</p>
+                                <div class="choose-file">
+                                    <p>Choose file here</p>
+                                    <img src="./assets/upload.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="basic-logistics-input-info">
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="cause">Style of cause</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Court File #</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="">Booking Dates</label>
+                                        <input type="date">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <img class="ask-png1" src="./assets/ask.png" alt="">
+                                        <label for="">Start Time</label>
+                                        <input type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="input-group">
+                                        <img class="ask-png2" src="./assets/ask.png" alt="">
+                                        <label for="Role"></label>
+                                        <select id="" name="">
+                                            <option value="Input"></option>
+                                            <option value="Input"></option>
+                                        </select>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label for="">Time Zone</label>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="">Arbitrator(s)</label>
+                                        <input type="text" placeholder="Chair's name">
+                                    </div>
+                                    <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="email" placeholder="Email">
+                                    </div>
+                                    
+                                </div>
+                                <div class="input-div">
+                                    <img class="plus-img" src="./assets/plus.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="text" placeholder="Add additional arbitrator">
+                                    </div>
+                                    <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="use-info">
+                                    <p>Tribunal secretary?</p>
+                                    <label class="switch">
+                                        <input class="switch-input" type="checkbox"/>
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                        <span class="switch-handle"></span> 
+                                    </label>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="text" placeholder="Tribunal secretary's name">
+                                    </div>
+                                    <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="email" placeholder="">
+                                    </div>
+                                    
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="">Witness(es)</label>
+                                        <input type="text" placeholder="witness' name">
+                                    </div>
+                                    <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="email" placeholder="Email">
+                                    </div>
+                                    
+                                </div>
+                                <div class="input-div">
+                                    <img class="plus-img" src="./assets/plus.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="text" placeholder="Add additional witness">
+                                    </div>
+                                    <img class="dot-img" src="./assets/menu-dots.png" alt="">
+                                    <div class="input-group">
+                                        <label for=""></label>
+                                        <input type="" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+
+                    <!-- virtual logistics info -->
+                    <div class="basic-logistics-info">
+                        <div class="heading-info">
+                            <img src="./assets/arrow-up.png" id="arrowUp4" alt="" onclick="hideContent4()">
+                            <img src="./assets/down.png" id="arrowDown4" alt="" onclick="showContent4()">
+                            <h3>Virtual Logistics</h3>
+                        </div>
+                        
+                        <div class="content" id="content4">
+                            <div class="use-info">
+                                <img class="ask-png3" src="./assets/ask.png" alt="">
+                                <p>Do you require a VCM (virtual case manager)?</p>
+                                <label class="switch">
+                                    <input class="switch-input" type="checkbox"/>
+                                    <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                    <span class="switch-handle"></span> 
+                                </label>
+                            </div>
+                            <div class="basic-logistics-input-info">
+                                <div class="input-div">
+                                    
+                                    <div class="input-group">
+                                        <img class="ask-png1" src="./assets/ask.png" alt="">
+                                        <label for="">Is there a particular VCM you want to work with?</label>
+                                        <input type="text" placeholder="VCM's name">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <img class="ask-png1" src="./assets/ask.png" alt="">
+                                        <label for="">Select a virtual plateform</label>
+                                        <select id="" name="">
+                                            <option value="Zoom">Zoom</option>
+                                            <option value="Zoom">Zoom</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <img class="ask-png1" src="./assets/ask.png" alt="">
+                                        <label for="">Number of virtual breakout rooms</label>
+                                        <select id="" name="">
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="use-info">
+                                    <img class="ask-png2" src="./assets/ask.png" alt="">
+                                    <p>Do you need us to provide Document Manager Services?</p>
+                                    <label class="switch">
+                                        <input class="switch-input" type="checkbox"/>
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                        <span class="switch-handle"></span> 
+                                    </label>
+                                </div>
+                                <div class="input-div">
+                                    <img class="ask-png1" src="./assets/ask.png" alt="">
+                                    <div class="input-group">
+                                        <label for="">Do you have any special accomodations for your booking that our I.T, team can look into prior to thr start date?</label>
+                                        <input type="email" placeholder="Input">
+                                    </div>
+                                </div>
+                                <div class="use-info">
+                                    <p>Would you like the your matter to be recorded?</p>
+                                    <label class="switch">
+                                        <input class="switch-input" type="checkbox"/>
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                        <span class="switch-handle"></span> 
+                                    </label>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                
+                    <button onclick="prev1()" class="btn btn-prev" id="prevBtn">Previous</button>
+                    <button onclick="next2()" class="btn btn-next" id="nextBtn">Next</button>
+                </div>
+
+                <!-- Additional Services -->
+                <div class="Additional-services form-step form-step-progress" id="form-step2">
+
+                    <!-- Court Reporting -->
+                    <div class="Court-Reporting-info">
+                        <div class="heading-info">
+                            <img src="./assets/arrow-up.png" id="arrowUp5" alt="" onclick="hideContent5()">
+                            <img src="./assets/down.png" id="arrowDown5" alt="" onclick="showContent5()">
+                            <h3>Court Reporting</h3>
+                            
+                        </div>
+                        
+                        <div class="content" id="content5">
+                            <div class="use-info">
+                                <p>Will this matter plan to have a Court Reporter?</p>
+                                <label class="switch">
+                                    <input class="switch-input" type="checkbox"/>
+                                    <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                    <span class="switch-handle"></span> 
+                                </label>
+                            </div>
+                            <div class="use-info">
+                                <p>Would you like an Arbitraion Place Court Reporter?</p>
+                                <label class="switch">
+                                    <input class="switch-input" type="checkbox"/>
+                                    <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                    <span class="switch-handle"></span> 
+                                </label>
+                            </div>
+                            <div class="basic-logistics-input-info">
+                                <div class="input-div">
+                                    <!-- <img class="ask-png1" src="ask.png" alt=""> -->
+                                    <div class="input-group">
+                                        <img class="ask-png1" src="./assets/ask.png" alt="">
+                                        <label for="">Is there a specific Arbitration Place Court Reporter you prefer?</label>
+                                        <select id="" name="">
+                                            <option value="">Select AP Court Reporter</option>
+                                            <option value="">Select AP Court Reporter</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="use-info">
+                                    <p>Will a transcript be required?</p>
+                                    <label class="switch">
+                                        <input class="switch-input" type="checkbox"/>
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                        <span class="switch-handle"></span> 
+                                    </label>
+                                </div>
+                                <div class="input-div">
+                                    
+                                    <div class="input-group">
+                                        <img class="ask-png1" src="./assets/ask.png" alt="">
+                                        <label for="">Turnaround time?</label>
+                                        <select id="" name="">
+                                            <option value="Standard">Standard</option>
+                                            <option value="Standard">Standard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="use-info">
+                                    <img class="ask-png2" src="./assets/ask.png" alt="">
+                                    <p>Multingual?</p>
+                                    <label class="switch">
+                                        <input class="switch-input" type="checkbox"/>
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                        <span class="switch-handle"></span> 
+                                    </label>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="">Please list the non-english languages you would like accommodated (separate by comma) </label>
+                                        <input type="text" placeholder="Input">
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <img class="ask-png2" src="./assets/ask.png" alt="">
+                                        <label for="">Daily Rough Draft?</label>
+                                        <select id="" name="">
+                                            <option value="">I don't know</option>
+                                            <option value="">I don't know</option>
+                                        </select>
+                                        
+                                    </div>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <img class="ask-png2" src="./assets/ask.png" alt="">
+                                        <label for="">Realtime reporting </label>
+                                        <select id="" name="">
+                                            <option value="">I don't know</option>
+                                            <option value="">I don't know</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                                
+                                
+                        </div>                   
+                    </div>
+
+                    <!-- Additional Features -->
+                    <div class="Court-Reporting-info">
+                        <div class="heading-info">
+                            <img src="./assets/arrow-up.png" id="arrowUp6" alt="" onclick="hideContent6()">
+                            <img src="./assets/down.png" id="arrowDown6" alt="" onclick="showContent6()">
+                            <h3>Additional Features</h3>
+                        </div>
+                        
+                        <div class="content" id="content6">
+                            <div class="use-info">
+                                <p>Do you require interpretation?</p>
+                                <label class="switch">
+                                    <input class="switch-input" type="checkbox"/>
+                                    <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                    <span class="switch-handle"></span> 
+                                </label>
+                            </div>
+                            
+                            <div class="basic-logistics-input-info">
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <img class="ask-png1" src="./assets/ask.png" alt="">
+                                        <label for="">Please list all languages to be interpreted (separate by comma)</label>
+                                        <input type="text" name="" id="" placeholder="Input">
+                                    </div>
+                                </div>
+                                <div class="use-info">
+                                    <img class="ask-png1" src="./assets/ask.png" alt="">
+                                    <p>Do you require CART services?</p>
+                                    <label class="switch">
+                                        <input class="switch-input" type="checkbox"/>
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                        <span class="switch-handle"></span> 
+                                    </label>
+                                </div>
+
+                                <div class="use-info">
+                                    <p>Will you need a quote prior to confirmation?</p>
+                                    <label class="switch">
+                                        <input class="switch-input" type="checkbox"/>
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                        <span class="switch-handle"></span> 
+                                    </label>
+                                </div>
+                                <div class="input-div">
+                                    <div class="input-group">
+                                        <label for="">Please list any additional requests or consideration you might have at this time </label>
+                                        <input type="text" placeholder="Input">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>                   
+                    </div>
+                
+                    <button class="btn btn-prev" onclick="prev2()">Previous</button>
+                    <input type="submit" name="submit" id="submitBtn" class="btn">
+                
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
